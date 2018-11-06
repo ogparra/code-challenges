@@ -26,6 +26,8 @@ class Main {
   // Input: Integer test array
   // Returns: Missing element in A.P.
   // if no missing number returns -1 
+
+  // Todo: Refactor code to have integer array descending solution
   public static int determineArithmeticProgression(int[] test){
     
     if(test.length < 3){
@@ -41,8 +43,12 @@ class Main {
 
       int p = Math.min(dist1, dist2); // arithmetic progression value
 
+
+
       for(int i = 0; i < test.length-1; i++){
+
         int exValue = test[i] + p;
+
         if(exValue == test[i+1]){
           continue;
         }else{
